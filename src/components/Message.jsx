@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
+import { VIDEO_CALL_URL } from "../config";
 
 const Message = ({ message }) => {
   const { currentUser } = useContext(AuthContext);
@@ -26,6 +27,27 @@ const Message = ({ message }) => {
     if (e.target.className === "image-modal-overlay") {
       setExpanded(false);
     }
+  };
+
+  const handleAcceptCall = () => {
+    const videoCallUrl = `${VIDEO_CALL_URL}?username=${encodeURIComponent(currentUser.displayName)}&mode=callee`;
+    window.open(videoCallUrl, '_blank', 'width=800,height=600');
+  };
+
+  const handleRejectCall = () => {
+    // You can add logic here to notify the caller that the call was rejected
+  };
+
+  const renderVideoCallRequest = () => {
+    if (message.type === 'video_call_request' && message.senderId !== currentUser.uid) {
+      return (
+        <div className="video-call-request">
+          <button onClick={handleAcceptCall} className="accept-call">Accept Call</button>
+          <button onClick={handleRejectCall} className="reject-call">Reject</button>
+        </div>
+      );
+    }
+    return null;
   };
 
   return (
@@ -63,6 +85,7 @@ const Message = ({ message }) => {
               />
             </div>
           )}
+          {renderVideoCallRequest()}
         </div>
       </div>
       {expanded && (
