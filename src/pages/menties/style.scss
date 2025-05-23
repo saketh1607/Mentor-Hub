@@ -1,0 +1,462 @@
+.mentiee {
+  color: black;
+
+  input, button, p, a, span {
+    color: black !important;
+  }
+}
+
+.imageContainer {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  
+    img {
+      width: 80%; // Adjust the width as needed
+      margin-right: 10px; // Add margin to create space between the image and the form
+      border-radius: 10px; // Optional: Add border-radius to the image
+    }
+  }
+  // style.scss
+
+// Define the color palette
+$primary-color: #537FE7;
+$secondary-color: #C0EEF2;
+$accent-color: #5356FF;
+$light-color: #ffffff;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: $primary-color; // Use primary color for background
+  color: $light-color; // Use light color for text
+
+  &-logo {
+    font-size: 1.5rem;
+    color: #0056b3;
+    $text-color: black;
+  }
+
+  &-search {
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      padding: 8px;
+      border-radius: 5px;
+      margin-right: 10px;
+      border: none;
+      outline: none;
+      width: 30%; // Adjust the width of the search bar
+    }
+  }
+
+  &-icons {
+    .icon {
+      cursor: pointer;
+      color: $light-color;
+      font-size: 1.5rem;
+      margin-left: 20px;
+      text-decoration: none; // Remove text decoration from icons
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 10px;
+
+    &-search {
+      margin-top: 10px;
+    }
+  }
+}
+.collapse {
+  position: fixed;
+  height: 100px;
+  width: 30%;
+  margin-top: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: whitesmoke; /* Example background color */
+  color: black; /* Example text color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 999; /* Ensure it's above other content */
+}
+
+.user-chat-info {
+  position: fixed;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  height: 100px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color:whitesmoke; /* Example background color */
+  color: black; /* Example text color */
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 999; /* Ensure it's above other content */
+}
+ .user-chat-info img {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+ }
+
+ .collapseerro {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 30px;
+  width: 250px;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color:whitesmoke; /* Example background color */
+  color: black; /* Example text color */
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 999; /* Ensure it's above other content */
+ }
+
+.clear-icon {
+  cursor: pointer;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 50;
+  right: 0; /* Place the sidebar on the right side */
+  height: 100%;
+  width: 250px;
+  background: linear-gradient(to bottom, rgb(42, 65, 91), rgb(16, 31, 50));
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Add shadow for a better look */
+  z-index: 1000; /* Ensure sidebar appears above other elements */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+ 
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px !important;
+  color: white;
+}
+
+.sidebar ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+  color:black;
+}
+
+.sidebar ul li a:hover {
+ 
+  color:black !important;
+  background-color: white;
+}
+
+
+.sidebar ul li a {
+  text-decoration: none;
+  color:white !important; /* Change text color as needed */
+}
+
+.edit-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30% !important;
+  height: 40% !important;
+  max-width: 50%;
+  margin-left: 32% !important;
+}
+
+.edit-profile-container input {
+  width: 80%;
+  margin-bottom: 15px;
+  padding: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.edit-profile-container button {
+  display: inline-block !important;
+  margin-bottom: 15px; /* This will create space between buttons and any element below */
+  margin-right: 10px; /* Adjust the right margin to create space between buttons */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.edit-profile-container input[type="file"] {
+  display: none;
+}
+
+.edit-profile-container label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-profile-container label img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.edit-profile-container button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.edit-profile-container button:hover,
+.edit-profile-container label:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 5%!important;
+  position: relative; /* Add this */
+}
+
+.profile-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45%; /* Adjust this value to change the gradient coverage */
+  background: linear-gradient(to bottom, rgb(58, 116, 250), rgb(166, 235, 239)); /* Gradient direction */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.profile-container .profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  z-index: 1; /* Add this to place the image on top of the gradient */
+}
+
+.profile-container .profile-details {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative; /* Add this */
+  z-index: 1; /* Add this */
+}
+
+.profile-container .profile-details h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.profile-container .profile-details p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.profile-container .profile-actions button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 90px;
+  
+}
+
+.profile-container .profile-actions button:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+// PersonalMentors.scss
+
+.personal-mentors {
+  margin-top: 20px; /* Example margin */
+}
+
+.mentor-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 10%;
+}
+
+.mentor-item {
+  margin-right: 20px; /* Example margin */
+  margin-bottom: 20px; /* Example margin */
+  cursor: pointer;
+}
+
+.mentor-item img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px; /* Example margin */
+}
+
+
+.mentor-item p {
+  margin: 0;
+}
+.mentor-list {
+  display: block;
+  width: 50%;
+}
+
+.infodiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  border: 1px solid #ccc; /* Border style */
+  padding: 10px; /* Padding for spacing */
+  margin: 10px; /* Margin for spacing */
+}
+.homeleft {
+  text-align: center;
+  height: 800px;
+  width: 50%; // Adjust the width as needed
+  float: left;
+  border: 1px solid #ccc;
+}
+
+.homeright {
+  text-align: center;
+  height: 800px;
+  border: 1px solid #ccc;
+  width:49.560%; // Adjust the width as needed
+  float: right;
+}
+.infodiv {
+  margin-bottom: 10px; /* Add some space between each mentor */
+}
+
+.infodiv img {
+  height: 20px; /* Reduce image height */
+  width: 20px; /* Reduce image width */
+}
+
+.infodiv p {
+  font-size: 14px; /* Reduce font size */
+}
+
+.infodiv i {
+  font-size: 14px; /* Reduce icon size */
+}
+.mentor-list {
+  width: 100%; /* Adjust the maximum width according to your preference */
+}
+.special button {
+  /* Add your desired background color */
+  background-color: rgb(55, 178, 240);
+  /* Add your desired text color */
+  color: white;
+  /* Add any additional styling such as padding, border, etc. */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* Add margin to create space between buttons */
+  margin-right: 10px;
+}
+
+/* Define styles for the buttons when hovered over */
+.special button:hover {
+  background-color: #45a049; /* Darker Green */
+}
+.mentor-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust grid columns as needed */
+  gap: 20px; /* Adjust gap between grid items as needed */
+}
+.mentor-list {
+  max-width: 300px; /* Adjust the maximum width according to your preference */
+  flex-wrap: wrap;
+}
+.infodiv {
+  display: flex;
+  align-items: center;
+  padding: 20px; /* Increase padding for larger size */
+  border-radius: 12px; /* Increase border radius for rounded corners */
+  background-color: #f0f0f0; /* Set background color */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add smooth transition effect */
+}
+
+.infodiv:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
+}
+
+.infodiv img {
+  height: 50px; /* Increase image height */
+  width: 50px; /* Increase image width */
+  border-radius: 50%;
+  margin-right: 20px; /* Adjust spacing between image and text */
+}
+
+.infodiv p {
+  margin: 0;
+  font-size: 18px; /* Increase font size */
+  color: #333; /* Set text color */
+}
+
+.infodiv i {
+  margin-left: auto; /* Push the icon to the right */
+  font-size: 24px; /* Increase icon size */
+  color: #007bff; /* Set icon color */
+}
